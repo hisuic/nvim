@@ -18,6 +18,8 @@ vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- Undo Settings
 local undodir = vim.fn.stdpath("state") .. "/undo"
