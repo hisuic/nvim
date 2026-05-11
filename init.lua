@@ -1,8 +1,14 @@
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
+-- Basic globals
+-- Basic globals
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+vim.g.have_nerd_font = true
 
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+vim.g.have_nerd_font = true
+
+require("config.options")
 require("config.lazy")
 require("config.keymaps")
 require("config.autocmds")
@@ -11,6 +17,8 @@ require("config.autocmds")
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 vim.g.have_nerd_font = true
+
+-- Options Settings
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 vim.opt.clipboard = "unnamedplus"
