@@ -36,6 +36,10 @@ return {
         quote = {
           enabled = true,
         },
+
+        latex = {
+          enabled = false,
+        },
       })
     end,
   },
