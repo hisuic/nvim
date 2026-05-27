@@ -58,6 +58,24 @@ vim.keymap.set("n", "<leader>hr", gs("reset_hunk"), { desc = "Reset Hunk" })
 vim.keymap.set("n", "<leader>hp", gs("preview_hunk"), { desc = "Preview Hunk" })
 vim.keymap.set("n", "<leader>tb", gs("toggle_current_line_blame"), { desc = "Toggle Blame" })
 
+-- glance.nvim
+vim.keymap.set("n", "gD", "<cmd>Glance definitions<CR>", {
+  desc = "Glance Definitions",
+})
+
+vim.keymap.set("n", "gR", "<cmd>Glance references<CR>", {
+  desc = "Glance References",
+})
+
+vim.keymap.set("n", "gY", "<cmd>Glance type_definitions<CR>", {
+  desc = "Glance Type Definitions",
+})
+
+vim.keymap.set("n", "gM", "<cmd>Glance implementations<CR>", {
+  desc = "Glance Implementations",
+})
+
+
 -- Window Management
 -- Split window
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Vertical Split" })
