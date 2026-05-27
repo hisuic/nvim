@@ -26,6 +26,10 @@ vim.keymap.set("n", "<leader>th", "<cmd>tabprevious<CR>", { desc = "Previous Tab
 
 -- Plugin Keymaps
 
+-- accelerated_jk
+vim.keymap.set("n", "j", "<Plug>(accelerated_jk_gj)", {})
+vim.keymap.set("n", "k", "<Plug>(accelerated_jk_gk)", {})
+
 -- oil.nvim
 vim.keymap.set("n", "<leader>e", "<cmd>Oil<CR>", { desc = "Open oil.nvim" })
 
