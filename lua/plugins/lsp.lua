@@ -21,8 +21,6 @@ return {
           "ts_ls",
           "html",
           "cssls",
-
-          -- added
           "pyright",
           "clangd",
           "rust_analyzer",
@@ -46,7 +44,6 @@ return {
       vim.lsp.config("ts_ls", {})
       vim.lsp.config("html", {})
       vim.lsp.config("cssls", {})
-
       vim.lsp.config("pyright", {})
       vim.lsp.config("clangd", {})
       vim.lsp.config("rust_analyzer", {})
@@ -60,8 +57,6 @@ return {
         "ts_ls",
         "html",
         "cssls",
-
-        -- added
         "pyright",
         "clangd",
         "rust_analyzer",
