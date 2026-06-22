@@ -3,6 +3,31 @@ return {
   "stevearc/oil.nvim",
   lazy = false,
   dependencies = { { "nvim-mini/mini.icons", opts = {} } },
+  init = function()
+    local group = vim.api.nvim_create_augroup("OilAutoPreview", { clear = true })
+
+    vim.api.nvim_create_autocmd("User", {
+      group = group,
+      pattern = "OilEnter",
+      callback = function(event)
+        local bufnr = event.data and event.data.buf
+
+        vim.schedule(function()
+          if not bufnr or not vim.api.nvim_buf_is_valid(bufnr) then
+            return
+          end
+          if vim.api.nvim_get_current_buf() ~= bufnr then
+            return
+          end
+
+          local oil = require("oil")
+          if oil.get_cursor_entry() then
+            oil.open_preview()
+          end
+        end)
+      end,
+    })
+  end,
   opts = {
     default_file_explorer = true, -- disable netrw and use oil when opening a directory
     columns = { -- what we see with oil
