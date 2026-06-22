@@ -8,6 +8,7 @@
 -- keymaps
 vim.keymap.set("i", "jj", "<ESC>", { silent = true })
 vim.keymap.set("n", "<Space><Space>", "<cmd>wq<CR>", { silent = true })
+vim.keymap.set("n", "<leader>Q", "<cmd>confirm qall<CR>", { desc = "Quit All" })
 vim.keymap.set("n", "<Esc><Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
 
 vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Open Lazy" })
