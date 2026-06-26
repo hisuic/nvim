@@ -21,7 +21,11 @@ return {
     },
     config = function(_, opts)
       require("noice").setup(opts)
-      vim.notify = require("notify")
+      local notify = require("notify")
+      notify.setup({
+        timeout = 2000,
+      })
+      vim.notify = notify
     end,
   },
 }
