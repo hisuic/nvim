@@ -44,7 +44,7 @@ opt.sidescrolloff = 12
 opt.sidescroll = 8
 
 -- Wrap
-opt.wrap = false
+opt.wrap = true
 
 -- Markdonw setting
 vim.api.nvim_create_autocmd("FileType", {
@@ -52,7 +52,7 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function()
     opt_local = vim.opt_local
     opt_local.wrap = true
-    opt_local.linebreak = true
+    opt_local.linebreak = false
     opt_local.spell = false
     opt_local.conceallevel = 2
   end,
