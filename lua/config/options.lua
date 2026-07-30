@@ -45,15 +45,3 @@ opt.sidescroll = 8
 
 -- Wrap
 opt.wrap = true
-
--- Markdonw setting
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "markdown",
-  callback = function()
-    opt_local = vim.opt_local
-    opt_local.wrap = true
-    opt_local.linebreak = false
-    opt_local.spell = false
-    opt_local.conceallevel = 2
-  end,
-})
