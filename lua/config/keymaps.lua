@@ -55,8 +55,8 @@ vim.keymap.set("n", "<leader>fh", tel("help_tags"), { desc = "Help Tags" })
 -- gitsigns
 local gs = function(fn) return function() require("gitsigns")[fn]() end end
 
-vim.keymap.set("n", "]c", gs("next_hunk"), { desc = "Next Hunk" })
-vim.keymap.set("n", "[c", gs("prev_hunk"), { desc = "Prev Hunk" })
+vim.keymap.set("n", "]h", gs("next_hunk"), { desc = "Next Hunk" })
+vim.keymap.set("n", "[h", gs("prev_hunk"), { desc = "Prev Hunk" })
 vim.keymap.set("n", "<leader>hs", gs("stage_hunk"), { desc = "Stage Hunk" })
 vim.keymap.set("n", "<leader>hr", gs("reset_hunk"), { desc = "Reset Hunk" })
 vim.keymap.set("n", "<leader>hp", gs("preview_hunk"), { desc = "Preview Hunk" })
