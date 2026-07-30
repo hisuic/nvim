@@ -12,6 +12,7 @@ return {
     dependencies = {
       "mason-org/mason.nvim",
       "neovim/nvim-lspconfig",
+      "hrsh7th/cmp-nvim-lsp",
     },
     event = { "BufReadPre", "BufNewFile" },
     config = function()
@@ -29,6 +30,10 @@ return {
           "yamlls",
           "marksman",
         },
+      })
+
+      vim.lsp.config("*", {
+        capabilities = require("cmp_nvim_lsp").default_capabilities(),
       })
 
       vim.lsp.config("lua_ls", {
