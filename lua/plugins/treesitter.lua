@@ -47,7 +47,16 @@ return {
         install_dir = opts.install_dir,
       })
 
-      local filetypes = vim.list_extend(vim.deepcopy(opts.ensure_installed), { "jsonc" })
+      local filetype_set = {}
+
+      for _, parser in ipairs(opts.ensure_installed) do
+        for _, filetype in ipairs(vim.treesitter.language.get_filetypes(parser)) do
+          filetype_set[filetype] = true
+        end
+      end
+
+      local filetypes = vim.tbl_keys(filetype_set)
+      table.sort(filetypes)
 
       vim.api.nvim_create_autocmd("FileType", {
         pattern = filetypes,
