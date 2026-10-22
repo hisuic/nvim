@@ -14,6 +14,12 @@ return {
       require("render-markdown").setup({
         enabled = true,
 
+        win_options = {
+          conceallevel = {
+            rendered = 2,
+          },
+        },
+
         heading = {
           enabled = true,
           sign = true,
