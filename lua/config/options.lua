@@ -37,6 +37,16 @@ opt.undoreload = 2000
 -- Split
 opt.splitright = true
 opt.splitbelow = true
+-- Thick lines for window borders
+opt.fillchars:append({
+  horiz = "━",
+  horizup = "┻",
+  horizdown = "┳",
+  vert = "┃",
+  vertleft = "┫",
+  vertright = "┣",
+  verthoriz = "╋",
+})
 
 -- Scroll
 opt.scrolloff = 8

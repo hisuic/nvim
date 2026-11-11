@@ -9,6 +9,8 @@ return {
         overrides = function(colors)
           return {
             Visual = { bg = "#046204" },
+            -- Visible border between split windows
+            WinSeparator = { fg = "#bfcf5a", bg = "NONE" },
           }
         end,
       })
